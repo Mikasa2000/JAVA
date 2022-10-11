@@ -24,38 +24,38 @@ public class SparseArray {
             }
         }
         // 创建对应的稀疏数组
-        int SparseArr[][] = new int[sum + 1][3];
-        SparseArr[0][0] = 11;
-        SparseArr[0][1] = 11;
-        SparseArr[0][2] = sum;
-        int count = 0;
-        for (int i = 0; i < chessArray.length; i++) {
-            for(int j = 0; j < chessArray.length; j++) {
-                if(chessArray[i][j] != 0){
-                    count++;
-                    SparseArr[count][0] = i;
-                    SparseArr[count][1] = j;
-                    SparseArr[count][2] = chessArray[i][j];
-                }
-            }
-        }
-        System.out.println();
-        System.out.println("行\t列\tval");
-        for(int i = 0; i < SparseArr.length;i++) {
-            System.out.printf("%d\t%d\t%d\t\n",SparseArr[i][0],SparseArr[i][1],SparseArr[i][2]);
-        }
+//        int SparseArr[][] = new int[sum + 1][3];
+//        SparseArr[0][0] = 11;
+//        SparseArr[0][1] = 11;
+//        SparseArr[0][2] = sum;
+//        int count = 0;
+//        for (int i = 0; i < chessArray.length; i++) {
+//            for(int j = 0; j < chessArray.length; j++) {
+//                if(chessArray[i][j] != 0){
+//                    count++;
+//                    SparseArr[count][0] = i;
+//                    SparseArr[count][1] = j;
+//                    SparseArr[count][2] = chessArray[i][j];
+//                }
+//            }
+//        }
+//        System.out.println();
+//        System.out.println("行\t列\tval");
+//        for(int i = 0; i < SparseArr.length;i++) {
+//            System.out.printf("%d\t%d\t%d\t\n",SparseArr[i][0],SparseArr[i][1],SparseArr[i][2]);
+//        }
 
 
         // 3. 将稀疏数组还原成二维数组
 
 
-        // 二维数组静态初始化
-//        int arr2[][] = new int [][] {{1,2,3},{1,23,18,20},{6,7,8}};
-//        for(int[] row : arr2 ){
-//            for(int item : row) {
-//                System.out.printf("%d\t",item);
-//            }
-//            System.out.println();
-//        }
+//         二维数组静态初始化
+        int arr2[][] = new int [][] {{1,2,3},{1,23,18,20},{6,7,8}};
+        for(int[] row : arr2 ){
+            for(int item : row) {
+                System.out.printf("%d\t",item);
+            }
+            System.out.println();
+        }
     }
 }
