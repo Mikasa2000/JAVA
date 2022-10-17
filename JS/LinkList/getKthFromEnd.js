@@ -30,6 +30,9 @@ let getKthFromEnd = function(head, k) {
         slow = slow.next;
     }
     return slow;
+
+
+
 };
 
 console.log(getKthFromEnd(pHead,2));

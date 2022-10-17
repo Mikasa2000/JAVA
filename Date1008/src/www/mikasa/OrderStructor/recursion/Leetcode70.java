@@ -25,6 +25,7 @@ package www.mikasa.OrderStructor.recursion;
 public class Leetcode70 {
     public static void main(String[] args) {
         System.out.println(clumb(2));
+
     }
 
     public static int clumb(int n) {
