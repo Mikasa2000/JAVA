@@ -57,5 +57,8 @@ public class SparseArray {
             }
             System.out.println();
         }
+        System.out.println("----------------");
+        System.out.println(arr2.length); // 表示这个二维数组有多少行
+        System.out.println(arr2[1].length); // 表示某一列的长度
     }
 }

@@ -38,8 +38,3 @@ function reverseList(pHead) {
 }
 
 console.log(reverseList(pHead));
-console.log(pHead);
-
-function reverse(head) {
-
-}

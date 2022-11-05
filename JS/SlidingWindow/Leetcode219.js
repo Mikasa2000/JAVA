@@ -18,7 +18,7 @@ function containsNearbyDuplicate(nums, k) {
         }
 
         set.add(nums[i]); // 没有找到就加入set扩大窗口
-        if(set.size > k) {
+        while(set.size > k) {
             set.delete(nums[i - k]);
         }
     }
