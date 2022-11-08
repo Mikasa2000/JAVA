@@ -27,6 +27,10 @@ function oddEvenList(head) {
   let odd = head;
   //指向even开头
   let evenhead = even;
+  /**
+   * 每次遍历两个节点，且even在后面，因此每轮循环用even检查后两个元素是否为NULL，
+   * 如果不为再进入循环进行上述连接过程。
+   */
   while(even != null && even.next != null) {
     odd.next = even.next; //奇数指针指向偶数指针的next
     odd = odd.next; //移动奇数指针

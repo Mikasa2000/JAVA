@@ -79,6 +79,27 @@ let root3 = {
     }
 }
 
+
+let root4 = {
+    val: 1,
+    left:{
+        val:2
+    }
+}
+
+let root5 = {
+    val: 1,
+    left:{
+        val:2,
+        right:{
+            val:3
+        }
+    },
+    right: {
+        val:2
+    }
+}
+
 function isSymmetrical(pRoot)
 {
     // write code here
@@ -112,4 +133,4 @@ function isSymmetrical(pRoot)
     return true;
 }
 
-console.log(isSymmetrical(root3));
+console.log(isSymmetrical(root5));

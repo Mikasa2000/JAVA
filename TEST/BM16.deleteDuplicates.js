@@ -18,10 +18,33 @@ let head = {
   }
 }
 
+let head2 = {
+  val: 1,
+  next:{
+    val:2,
+    next:{
+      val: 6,
+      next: {
+        val: 3,
+        next:{
+          val:6
+        }
+      }
+    }
+  }
+}
+
 function ListNode(x){
   this.val = x;
   this.next = null;
 }
+
+/**
+ * 
+ * @param {*} head 
+ * @returns 
+ * 并且保证给定的节点 val 不是链表中的最后一个节点。
+ */
 
 function deleteDuplicates(head) {
   if(head == null) return null;
@@ -29,7 +52,7 @@ function deleteDuplicates(head) {
   dummyNode.next = head;
   let cur = dummyNode;
 
-  while(cur.next != null && cur.next.next != null) {
+  while(cur.next != null) {
     // 遇到节点相同的两个值
     if(cur.next.val == cur.next.next.val) { 
       let temp = cur.next.val;
@@ -44,4 +67,4 @@ function deleteDuplicates(head) {
   return dummyNode.next;
 }
 
-console.log(deleteDuplicates(head));
+console.log(deleteDuplicates(head2));

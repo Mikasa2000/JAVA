@@ -10,10 +10,10 @@ function findNumberIn2DArray(target, array) {
   let m = array[0].length; // 列数
 
   // 从左下角开始查询
-  for(let i = n - 1; j = 0; i >= 0 && j < m) {
+  for(let i = n - 1,j = 0; i >= 0 && j < m;) {
     if(target > array[i][j])
       j++;
-    if(target < array[i][j])
+    else if(target < array[i][j])
       i--;
     else 
       return true;

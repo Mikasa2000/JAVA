@@ -12,6 +12,23 @@ let head = {
   }
 }
 
+
+let head2 = {
+  val: 1,
+  next:{
+    val:2,
+    next:{
+      val: 6,
+      next: {
+        val: 3,
+        next:{
+          val:6
+        }
+      }
+    }
+  }
+}
+
 function deleteDuplicates(head) {
   if(head == null) return null;
   let cur = head;
@@ -25,4 +42,4 @@ function deleteDuplicates(head) {
   return head;
 }
 
-console.log(deleteDuplicates(head));
+console.log(deleteDuplicates(head2));

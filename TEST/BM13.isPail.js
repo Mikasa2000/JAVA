@@ -13,42 +13,43 @@ let head = {
     }
   }
 }
-function isPail(head) {
-  let q = head; // 是快指针
-  let p = head; // 是慢指针
+var isPalindrome = function(head) {
+  // 定义快慢指针
+  let q = head;
+  let s = head;
 
   while(q != null && q.next != null) {
-    q = q.next.next;
-    p = p.next;
+      q = q.next.next;
+      s = s.next;
   }
 
-  if(q != null) { // 当快指针不为null时，证明该链表是奇数个
-    p = p.next;
+  // 如果是奇数的情况
+  if(q != null) {
+      s = s.next;
   }
-  p = reverse(p);
-  console.log(p)
-  q = head;
-  console.log(q)
+  // 反转
+  s = reverseList(s);
+  q = head; // 让q指回头部
 
-  // 反转前后进行对比
-  while(p != null) {
-    if(q.val != p.val) {
-      return false;
-    }
-    q = q.next;
-    p = p.next;
+  while(s != null) { // slow会向后移动直到null
+      if(q.val != s.val) {
+          return false;
+      }
+      q = q.next;
+      s = s.next;
   }
   return true;
-}
 
+};
 
-function reverse(phead) {
-  let pre = null; 
-  while(phead != null) {
-    let temp = phead.next;
-    phead.next = pre;
-    pre = phead;
-    phead = temp;
+function reverseList(pHead) {
+  let temp = null;
+  let pre = null;
+  while(pHead != null) {
+      temp = pHead.next;
+      pHead.next = pre;
+      pre = pHead;
+      pHead = temp;
   }
   return pre;
 }
