@@ -1,13 +1,13 @@
-let ans = [];
-let innerObj = [{name:"zs"}]
+// let ans = [];
+// let innerObj = [{name:"zs"}]
 
 
-ans.push(innerObj); //将innerObj的地址拷贝, ans = [[1,2,3]]
-let res = innerObj.pop(); //改变innerObj内容
+// ans.push(innerObj); //将innerObj的地址拷贝, ans = [[1,2,3]]
+// let res = innerObj.pop(); //改变innerObj内容
 
-console.log(innerObj)
-console.log(ans) //ans = [[1,2]] ans发生了改变
-console.log(res)
+// console.log(innerObj)
+// console.log(ans) //ans = [[1,2]] ans发生了改变
+// console.log(res)
 
 
 /**
@@ -25,17 +25,24 @@ console.log(res)
 // console.log(ans)  //ans = [[1,2,3]]
 
 
-let root = {
-  left:{
-    val:1
-  }
-}
+// let root = {
+//   left:{
+//     val:1
+//   }
+// }
 
-let q1 = [];
+// let q1 = [];
 
-q1.push(root.left);
-let node = q1.shift();
+// q1.push(root.left);
+// let node = q1.shift();
 
-node = {name:"zs"};
+// node = {name:"zs"};
 
-console.log(root);
+// console.log(root);
+
+
+const set = new Set();
+set.add(0);
+set.add(1);
+set.add(0);
+console.log(set);

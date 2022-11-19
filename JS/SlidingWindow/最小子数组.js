@@ -14,7 +14,7 @@ function minSubArrayLen(target, nums) {
 
 
   while(right < nums.length) {
-    curSum = curSum + nums[right]; 
+    curSum = curSum + nums[right];
     while(curSum >= target) { // d
       // 特殊情况
       // 1.当前的长度小于了之前记录的最小的长度；

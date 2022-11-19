@@ -1,3 +1,0 @@
-function FindKthToTail(head, k) {
-  
-}

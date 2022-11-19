@@ -54,4 +54,4 @@ function reverseList(pHead) {
   return pre;
 }
 
-console.log(isPail(head));
+console.log(isPalindrome(head));
